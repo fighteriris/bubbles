@@ -1,0 +1,11 @@
+General:
+teamace/bubbles
+wanderseeme
+SatanWoo
+
+URL:
+git@github.com:teamace/bubbles.git
+
+Commands:
+git remote add origin git@github.com:teamace/bubbles.git
+git push -u origin master
