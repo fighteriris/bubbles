@@ -18,6 +18,10 @@
 		C1CFCD1C14B985AE008A1B1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CFCD1A14B985AE008A1B1F /* main.m */; };
 		C1CFCD1F14B985CC008A1B1F /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1CFCD1D14B985CC008A1B1F /* ViewController.xib */; };
 		C1CFCD2214B985D2008A1B1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CFCD2114B985D2008A1B1F /* ViewController.m */; };
+		C1CFCD3014B986CB008A1B1F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C1CFCD2C14B986CB008A1B1F /* Default.png */; };
+		C1CFCD3114B986CB008A1B1F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1CFCD2D14B986CB008A1B1F /* Default@2x.png */; };
+		C1CFCD3214B986CB008A1B1F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C1CFCD2E14B986CB008A1B1F /* Icon.png */; };
+		C1CFCD3314B986CB008A1B1F /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1CFCD2F14B986CB008A1B1F /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		C1CFCD1E14B985CC008A1B1F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Bubbles/en.lproj/ViewController.xib; sourceTree = SOURCE_ROOT; };
 		C1CFCD2014B985D2008A1B1F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Bubbles/ViewController.h; sourceTree = SOURCE_ROOT; };
 		C1CFCD2114B985D2008A1B1F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Bubbles/ViewController.m; sourceTree = SOURCE_ROOT; };
+		C1CFCD2C14B986CB008A1B1F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
+		C1CFCD2D14B986CB008A1B1F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		C1CFCD2E14B986CB008A1B1F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = SOURCE_ROOT; };
+		C1CFCD2F14B986CB008A1B1F /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,10 @@
 		C121946914B591D700159A9F /* Bubbles */ = {
 			isa = PBXGroup;
 			children = (
+				C1CFCD2C14B986CB008A1B1F /* Default.png */,
+				C1CFCD2D14B986CB008A1B1F /* Default@2x.png */,
+				C1CFCD2E14B986CB008A1B1F /* Icon.png */,
+				C1CFCD2F14B986CB008A1B1F /* Icon@2x.png */,
 				C121946A14B591D700159A9F /* Supporting Files */,
 				C1CFCD0314B98426008A1B1F /* Mac */,
 				C1CFCD0214B98419008A1B1F /* iOS */,
@@ -183,6 +195,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1CFCD1F14B985CC008A1B1F /* ViewController.xib in Resources */,
+				C1CFCD3014B986CB008A1B1F /* Default.png in Resources */,
+				C1CFCD3114B986CB008A1B1F /* Default@2x.png in Resources */,
+				C1CFCD3214B986CB008A1B1F /* Icon.png in Resources */,
+				C1CFCD3314B986CB008A1B1F /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
