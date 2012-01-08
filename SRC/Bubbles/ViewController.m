@@ -10,7 +10,7 @@
 
 @implementation ViewController
 @synthesize bubble;
-@synthesize input, result;
+@synthesize textMessage, imageMessage;
 
 - (void)didReceiveMemoryWarning
 {
@@ -67,26 +67,40 @@
 
 #pragma mark - IBOultets
 
-- (IBAction)send:(id)sender {
-    [self.bubble broadcastMessage:[WDMessage messageWithText:input.text]];
-    [input resignFirstResponder];
+- (IBAction)sendText:(id)sender {
+    [self.bubble broadcastMessage:[WDMessage messageWithText:textMessage.text]];
+    [textMessage resignFirstResponder];
+}
+
+- (IBAction)selectImage:(id)sender {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        UIImagePickerController *t = [[UIImagePickerController alloc] init];
+        t.delegate = self;
+        [self presentModalViewController:t animated:YES];
+        [t release];
+    }
+}
+
+- (IBAction)sendImage:(id)sender {
+    [self.bubble broadcastMessage:[WDMessage messageWithText:textMessage.text]];
+    [textMessage resignFirstResponder];
 }
 
 #pragma mark - Events
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    [input resignFirstResponder];
+    [textMessage resignFirstResponder];
 }
 
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
-	[input resignFirstResponder];
+	[textMessage resignFirstResponder];
     return YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-	[input resignFirstResponder];
+	[textMessage resignFirstResponder];
     return YES;
 }
 
@@ -94,11 +108,25 @@
 
 - (void)didReceiveText:(NSString *)text {
     DLog(@"VC didReceiveText %@", text);
-    result.text = text;
+    textMessage.text = text;
 }
 
 - (void)didReceiveImage:(NSString *)image {
     DLog(@"VC didReceiveImage %@", image);
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+    DLog(@"VC didFinishPickingMediaWithInfo %@", image);
+    imageMessage.image = image;
+    
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

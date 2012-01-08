@@ -8,16 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WDMessage : NSObject {
+enum {
+    WDMessageTypeText, 
+    WDMessageTypeImage
+};
+typedef NSUInteger WDMessageType;
+
+@interface WDMessage : NSObject <NSCoding> {
     NSString *_sender;
     NSDate *_time;
     NSData *_content;
+    NSUInteger _type;
 }
 
 @property (nonatomic, retain) NSString *sender;
 @property (nonatomic, retain) NSDate *time;
 @property (nonatomic, retain) NSData *content;
+@property (nonatomic, assign) NSUInteger type;
 
 + (id)messageWithText:(NSString *)text;
++ (id)messageWithImage:(UIImage *)image;
 
 @end

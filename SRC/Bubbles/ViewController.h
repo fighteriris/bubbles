@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "WDBubble.h"
 
-@interface ViewController : UIViewController <UITextFieldDelegate, WDBubbleDelegate>
+@interface ViewController : UIViewController <UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, WDBubbleDelegate>
 
 @property (nonatomic, retain) WDBubble *bubble;
-@property (nonatomic, retain) IBOutlet UITextField *input;
-@property (nonatomic, retain) IBOutlet UITextView *result;
+@property (nonatomic, retain) IBOutlet UITextField *textMessage;
+@property (nonatomic, retain) IBOutlet UIImageView *imageMessage;
 
 @end
