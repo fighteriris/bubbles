@@ -1,17 +1,18 @@
 //
 //  main.m
-//  Bubbles
+//  LearnBonjour
 //
-//  Created by Wander See on 11-3-20.
-//  Copyright 2011年 Tongji Apple Club. All rights reserved.
+//  Created by 王 得希 on 12-1-5.
+//  Copyright (c) 2012年 BMW Group ConnectedDrive Lab China. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
+#import "AppDelegate.h"
+
 int main(int argc, char *argv[])
 {
-  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-  int retVal = UIApplicationMain(argc, argv, nil, nil);
-  [pool release];
-  return retVal;
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    }
 }
